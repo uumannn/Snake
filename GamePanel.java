@@ -45,7 +45,7 @@ public class GamePanel extends JPanel implements ActionListener {
             /*
             for (int i=0; i<SCREEN_HEIGHT/UNIT_SIZE; i++) {
                 g.drawLine(i*UNIT_SIZE,0,i*UNIT_SIZE,SCREEN_HEIGHT); // matriks for x and y axis
-                g.drawLine(0,i*UNIT_SIZE,SCREEN_WIDTH,i*UNIT_SIZE);  // unit_size arttırırsan matriksler büyür
+                g.drawLine(0,i*UNIT_SIZE,SCREEN_WIDTH,i*UNIT_SIZE);  
             }
              */
             g.setColor(Color.red);
@@ -76,7 +76,7 @@ public class GamePanel extends JPanel implements ActionListener {
   }
   public void move() {
         for (int i=bodyParts; i>0; i--) {
-            x[i]=x[i-1]; // shifting all cordiantes
+            x[i]=x[i-1]; // shifting all cordinates
             y[i]=y[i-1];
         }
         switch (direction) {
@@ -110,7 +110,7 @@ public class GamePanel extends JPanel implements ActionListener {
                 running=false;
             }
         }
-        // checks if head touches left border
+        // check if head touches left border
       if(x[0]<0) {
           running = false;
       }
